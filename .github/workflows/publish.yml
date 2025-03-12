@@ -1,0 +1,51 @@
+name: Publish to PyPI
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read    # needed to read the repo content
+  id-token: write   # needed for OIDC auth to PyPI
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Poetry
+        run: pip install poetry
+
+      - name: Install dependencies
+        # Installs main + dev dependencies from your [tool.poetry.group.dev] section
+        run: poetry install --with dev
+
+      - name: Run tests
+        # Runs the pytest suite (with coverage, per your pyproject.toml settings)
+        run: poetry run pytest
+
+      # - name: (Optional) Lint & type-check
+        # Runs black, isort, and mypy checks, if you want CI to fail on formatting or type issues
+        # run: |
+        #  poetry run black --check .
+        #  poetry run isort --check-only .
+        #  poetry run mypy .
+
+      - name: Build package
+        run: poetry build
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        # This action detects OIDC automatically if you registered as a Trusted Publisher on PyPI.
+        env:
+          # Tells the publish action to use OIDC credentials instead of a real token
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: __token__
