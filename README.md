@@ -87,7 +87,7 @@ async def get_score(user_id: str):
 
 ## Documentation
 
-Detailed guides, API references, and usage examples are available in the [documentation](https://pyscored.readthedocs.io).
+Detailed guides, API references, and usage examples are available in the [documentation](docs/API.md).
 
 ## Contributing
 

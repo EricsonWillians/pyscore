@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pyscored"
-version = "0.1.0"
+version = "0.1.1"
 description = "Universal, Plug-in-Play Scoring System"
 authors = ["Ericson Willians <ericsonwillians@protonmail.com>"]
 license = "GNU"
