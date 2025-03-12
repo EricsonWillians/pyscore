@@ -1,16 +1,16 @@
 # docs/CONTRIBUTING.md
 
-## Contributing to pyscore
+## Contributing to pyscored
 
-Thank you for your interest in contributing to **pyscore**! This document outlines clear guidelines and best practices to help you contribute effectively.
+Thank you for your interest in contributing to **pyscored**! This document outlines clear guidelines and best practices to help you contribute effectively.
 
 ### Getting Started
 
 1. **Fork the repository:** Click the "Fork" button at the top right of the repository page on GitHub.
 2. **Clone your fork:**
    ```bash
-   git clone https://github.com/<your-username>/pyscore.git
-   cd pyscore
+   git clone https://github.com/<your-username>/pyscored.git
+   cd pyscored
    ```
 3. **Set up the development environment:**
    ```bash
@@ -37,7 +37,7 @@ Thank you for your interest in contributing to **pyscore**! This document outlin
 
 - **Check test coverage:**
   ```bash
-  poetry run pytest --cov=pyscore
+  poetry run pytest --cov=pyscored
   ```
 
 ### Code Quality
@@ -53,7 +53,7 @@ Before committing your changes, ensure code quality checks pass:
 - **Type checking and linting:**
   ```bash
   poetry run mypy .
-  poetry run pylint pyscore tests
+  poetry run pylint pyscored tests
   ```
 
 ### Committing Changes
@@ -88,4 +88,4 @@ Before committing your changes, ensure code quality checks pass:
 
 Please follow respectful and professional conduct in all interactions within the project community.
 
-Thank you for contributing to **pyscore**!
+Thank you for contributing to **pyscored**!

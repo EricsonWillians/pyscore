@@ -1,8 +1,8 @@
-# pyscore/core/scoring_engine.py
+# pyscored/core/scoring_engine.py
 
 from typing import Dict, Any, Callable, Optional
-from pyscore.core.sandbox import Sandbox
-from pyscore.plugins.base_plugin import BasePlugin
+from pyscored.core.sandbox import Sandbox
+from pyscored.plugins.base_plugin import BasePlugin
 
 class ScoringEngine:
     """Core scoring engine that manages scoring logic within a sandboxed environment."""

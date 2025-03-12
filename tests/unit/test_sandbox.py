@@ -1,7 +1,7 @@
 # tests/unit/test_sandbox.py
 
 import pytest
-from pyscore.core.sandbox import Sandbox
+from pyscored.core.sandbox import Sandbox
 
 
 @pytest.fixture

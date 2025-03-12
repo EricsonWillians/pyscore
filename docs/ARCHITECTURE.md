@@ -2,7 +2,7 @@
 
 ## Architecture Overview
 
-The **pyscore** architecture is modular, robust, and flexible, designed specifically to integrate smoothly into various Python-based applications, including traditional games and modern web applications. Below, each key component is explained in detail to provide a clear understanding of how the system is structured and operates.
+The **pyscored** architecture is modular, robust, and flexible, designed specifically to integrate smoothly into various Python-based applications, including traditional games and modern web applications. Below, each key component is explained in detail to provide a clear understanding of how the system is structured and operates.
 
 ---
 
@@ -83,5 +83,5 @@ Reusable helper functions enhance the robustness and consistency of scoring oper
 - **Security:** Sandbox ensures safe execution of dynamic scoring logic.
 - **Universality:** Flexible adapters ensure compatibility with various external systems.
 
-This comprehensive architecture ensures pyscore remains robust, secure, and flexible, facilitating seamless integration across diverse applications and environments.
+This comprehensive architecture ensures pyscored remains robust, secure, and flexible, facilitating seamless integration across diverse applications and environments.
 

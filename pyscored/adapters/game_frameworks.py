@@ -1,7 +1,7 @@
-# pyscore/adapters/game_frameworks.py
+# pyscored/adapters/game_frameworks.py
 
 from typing import Any
-from pyscore.core.scoring_engine import ScoringEngine
+from pyscored.core.scoring_engine import ScoringEngine
 
 
 class GameFrameworkAdapter:

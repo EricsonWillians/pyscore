@@ -1,7 +1,7 @@
 # tests/unit/test_helpers.py
 
 import pytest
-from pyscore.utils.helpers import validate_score, merge_config, format_score, clamp_score
+from pyscored.utils.helpers import validate_score, merge_config, format_score, clamp_score
 
 def test_merge_config():
     default = {"a": 1, "b": 2}

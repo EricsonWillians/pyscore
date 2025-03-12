@@ -1,7 +1,7 @@
-# pyscore/plugins/combo_bonus_plugin.py
+# pyscored/plugins/combo_bonus_plugin.py
 
 from typing import Any
-from pyscore.plugins.base_plugin import BasePlugin
+from pyscored.plugins.base_plugin import BasePlugin
 
 
 class ComboBonusPlugin(BasePlugin):

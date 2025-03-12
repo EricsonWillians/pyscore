@@ -1,4 +1,4 @@
-# API Documentation for pyscore
+# API Documentation for pyscored
 
 ## Scoring Engine
 

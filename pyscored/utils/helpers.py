@@ -1,4 +1,4 @@
-# pyscore/utils/helpers.py
+# pyscored/utils/helpers.py
 
 from typing import Any, Dict, Type, Optional
 

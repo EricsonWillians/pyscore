@@ -1,13 +1,13 @@
-# Usage Guide for pyscore
+# Usage Guide for pyscored
 
-This guide provides comprehensive examples demonstrating how to effectively integrate and utilize the `pyscore` library in your Python applications.
+This guide provides comprehensive examples demonstrating how to effectively integrate and utilize the `pyscored` library in your Python applications.
 
 ## Installation
 
 Ensure you have Poetry installed, then run:
 
 ```bash
-poetry add pyscore
+poetry add pyscored
 ```
 
 ## Basic Usage
@@ -15,7 +15,7 @@ poetry add pyscore
 ### Initialize Scoring Engine
 
 ```python
-from pyscore.core.scoring_engine import ScoringEngine
+from pyscored.core.scoring_engine import ScoringEngine
 
 engine = ScoringEngine()
 engine.initialize_score(player_id="player1", initial_score=100)
@@ -42,7 +42,7 @@ print(f"Double points result: {result}")
 ### Register and Execute ComboBonusPlugin
 
 ```python
-from pyscore.plugins.combo_bonus_plugin import ComboBonusPlugin
+from pyscored.plugins.combo_bonus_plugin import ComboBonusPlugin
 
 combo_plugin = ComboBonusPlugin(name="combo_bonus", bonus_threshold=3, bonus_multiplier=1.5)
 engine.register_plugin(combo_plugin)
@@ -53,7 +53,7 @@ engine.execute_plugin("combo_bonus", player_id="player1", action_successful=True
 ### Register and Execute StreakRewardPlugin
 
 ```python
-from pyscore.plugins.streak_reward_plugin import StreakRewardPlugin
+from pyscored.plugins.streak_reward_plugin import StreakRewardPlugin
 
 streak_plugin = StreakRewardPlugin(name="streak_reward", reward_streak=5, reward_points=50)
 engine.register_plugin(streak_plugin)
@@ -66,7 +66,7 @@ engine.execute_plugin("streak_reward", player_id="player1", action_successful=Tr
 ### Using GameFrameworkAdapter
 
 ```python
-from pyscore.adapters.game_frameworks import GameFrameworkAdapter
+from pyscored.adapters.game_frameworks import GameFrameworkAdapter
 
 adapter = GameFrameworkAdapter(engine)
 adapter.setup_player("player1", initial_score=50)
@@ -81,7 +81,7 @@ print(f"Game player score: {score}")
 
 ```python
 from fastapi import FastAPI
-from pyscore.adapters.web_frameworks import WebFrameworkAdapter
+from pyscored.adapters.web_frameworks import WebFrameworkAdapter
 
 app = FastAPI()
 web_adapter = WebFrameworkAdapter(engine)
@@ -96,7 +96,7 @@ async def update_user_score(user_id: str, points: float):
 ## Utility Functions
 
 ```python
-from pyscore.utils.helpers import format_score, validate_score
+from pyscored.utils.helpers import format_score, validate_score
 
 score = 123.4567
 if validate_score(score):
@@ -106,5 +106,5 @@ else:
     print("Invalid score provided.")
 ```
 
-These usage examples illustrate integrating the `pyscore` library into various Python applications, showcasing its flexibility and extensibility.
+These usage examples illustrate integrating the `pyscored` library into various Python applications, showcasing its flexibility and extensibility.
 

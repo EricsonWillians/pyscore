@@ -1,7 +1,7 @@
-# pyscore/adapters/web_frameworks.py
+# pyscored/adapters/web_frameworks.py
 
 from typing import Any, Dict
-from pyscore.core.scoring_engine import ScoringEngine
+from pyscored.core.scoring_engine import ScoringEngine
 
 
 class WebFrameworkAdapter:

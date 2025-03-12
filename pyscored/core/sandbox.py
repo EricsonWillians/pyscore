@@ -1,4 +1,4 @@
-# pyscore/core/sandbox.py
+# pyscored/core/sandbox.py
 
 from typing import Callable, Dict, Any
 

@@ -1,8 +1,8 @@
 # tests/unit/test_scoring_engine.py
 
 import pytest
-from pyscore.core.scoring_engine import ScoringEngine
-from pyscore.core.sandbox import Sandbox
+from pyscored.core.scoring_engine import ScoringEngine
+from pyscored.core.sandbox import Sandbox
 
 
 @pytest.fixture

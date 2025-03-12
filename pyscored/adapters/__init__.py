@@ -1,5 +1,5 @@
 """
-Adapters for integrating pyscore with various frameworks.
+Adapters for integrating pyscored with various frameworks.
 
 This package provides pre-built middleware for seamless integration with
 game and web frameworks.

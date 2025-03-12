@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "pyscore"
+name = "pyscored"
 version = "0.1.0"
 description = "Universal, Plug-in-Play Scoring System"
 authors = ["Ericson Willians <ericsonwillians@protonmail.com>"]
 license = "GNU"
 readme = "README.md"
-repository = "https://github.com/ericsonwillians/pyscore"
-documentation = "https://pyscore.readthedocs.io"
+repository = "https://github.com/ericsonwillians/pyscored"
+documentation = "https://github.com/ericsonwillians/pyscored/docs/API.md"
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
@@ -52,4 +52,4 @@ testpaths = ["tests"]
 python_files = "test_*.py"
 python_functions = "test_*"
 python_classes = "Test*"
-addopts = "--cov=pyscore --cov-report=xml --cov-report=term"
+addopts = "--cov=pyscored --cov-report=xml --cov-report=term"

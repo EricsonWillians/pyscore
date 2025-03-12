@@ -1,8 +1,8 @@
 # PUBLISHING_GUIDE.md
 
-## Publishing pyscore to PyPI
+## Publishing pyscored to PyPI
 
-Follow these comprehensive steps to publish the **pyscore** Python package to PyPI, ensuring it's accessible for easy installation by anyone.
+Follow these comprehensive steps to publish the **pyscored** Python package to PyPI, ensuring it's accessible for easy installation by anyone.
 
 ### Prerequisites
 
@@ -18,14 +18,14 @@ Ensure your `pyproject.toml` has correct metadata:
 
 ```toml
 [tool.poetry]
-name = "pyscore"
+name = "pyscored"
 version = "0.1.0"
 description = "Universal, Plug-in-Play Scoring System"
 authors = ["Your Name <your.email@example.com>"]
 license = "GNU"
 readme = "README.md"
-repository = "https://github.com/yourusername/pyscore"
-documentation = "https://pyscore.readthedocs.io"
+repository = "https://github.com/yourusername/pyscored"
+documentation = "https://pyscored.readthedocs.io"
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -54,8 +54,8 @@ ls dist/
 You should see files similar to:
 
 ```
-pyscore-0.1.0-py3-none-any.whl
-pyscore-0.1.0.tar.gz
+pyscored-0.1.0-py3-none-any.whl
+pyscored-0.1.0.tar.gz
 ```
 
 ---
@@ -99,7 +99,7 @@ poetry publish --build
 After successful publishing, verify by visiting your project URL at:
 
 ```
-https://pypi.org/project/pyscore/
+https://pypi.org/project/pyscored/
 ```
 
 ---
@@ -109,13 +109,13 @@ https://pypi.org/project/pyscore/
 Anyone can now install your package directly from PyPI:
 
 ```bash
-pip install pyscore
+pip install pyscored
 ```
 
 or
 
 ```bash
-poetry add pyscore
+poetry add pyscored
 ```
 
 ---
@@ -137,4 +137,4 @@ To release updates:
 
 ---
 
-Congratulations! Your `pyscore` package is now live and accessible to the entire Python community.
+Congratulations! Your `pyscored` package is now live and accessible to the entire Python community.

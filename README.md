@@ -1,6 +1,6 @@
-# pyscore – Universal Plug-in-Play Scoring System
+# pyscored – Universal Plug-in-Play Scoring System
 
-**pyscore** is a powerful, flexible, and easy-to-use Python library designed for universal scoring management. It seamlessly integrates into various applications, from game development frameworks to modern web applications, providing robust scoring functionalities through a secure sandbox environment and a versatile plugin architecture.
+**pyscored** is a powerful, flexible, and easy-to-use Python library designed for universal scoring management. It seamlessly integrates into various applications, from game development frameworks to modern web applications, providing robust scoring functionalities through a secure sandbox environment and a versatile plugin architecture.
 
 ## Features
 
@@ -11,10 +11,10 @@
 
 ## Installation
 
-Install pyscore easily using Poetry:
+Install pyscored easily using Poetry:
 
 ```bash
-poetry add pyscore
+poetry add pyscored
 ```
 
 ## Quick Start
@@ -22,7 +22,7 @@ poetry add pyscore
 Here's a quick example to initialize and use the Scoring Engine:
 
 ```python
-from pyscore.core.scoring_engine import ScoringEngine
+from pyscored.core.scoring_engine import ScoringEngine
 
 engine = ScoringEngine()
 engine.initialize_score("player1", initial_score=0)
@@ -50,7 +50,7 @@ Extend functionality using provided or custom plugins:
 Example of registering plugins:
 
 ```python
-from pyscore.plugins.combo_bonus_plugin import ComboBonusPlugin
+from pyscored.plugins.combo_bonus_plugin import ComboBonusPlugin
 
 combo_plugin = ComboBonusPlugin(name="combo_bonus", bonus_threshold=3, bonus_multiplier=1.5)
 engine.register_plugin(combo_plugin)
@@ -62,7 +62,7 @@ engine.register_plugin(combo_plugin)
 Integrate with popular game frameworks:
 
 ```python
-from pyscore.adapters.game_frameworks import GameFrameworkAdapter
+from pyscored.adapters.game_frameworks import GameFrameworkAdapter
 
 adapter = GameFrameworkAdapter(engine)
 adapter.setup_player("player1")
@@ -74,7 +74,7 @@ Easily implement gamification in web applications:
 
 ```python
 from fastapi import FastAPI
-from pyscore.adapters.web_frameworks import WebFrameworkAdapter
+from pyscored.adapters.web_frameworks import WebFrameworkAdapter
 
 app = FastAPI()
 web_adapter = WebFrameworkAdapter(engine)
@@ -87,7 +87,7 @@ async def get_score(user_id: str):
 
 ## Documentation
 
-Detailed guides, API references, and usage examples are available in the [documentation](https://pyscore.readthedocs.io).
+Detailed guides, API references, and usage examples are available in the [documentation](https://pyscored.readthedocs.io).
 
 ## Contributing
 
@@ -95,5 +95,5 @@ We welcome contributions! Please refer to our [CONTRIBUTING.md](docs/CONTRIBUTIN
 
 ## License
 
-pyscore is licensed under the [GNU License](LICENSE).
+pyscored is licensed under the [GNU License](LICENSE).
 

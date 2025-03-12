@@ -1,7 +1,7 @@
-# pyscore/plugins/time_decay_plugin.py
+# pyscored/plugins/time_decay_plugin.py
 
 from typing import Any
-from pyscore.plugins.base_plugin import BasePlugin
+from pyscored.plugins.base_plugin import BasePlugin
 
 
 class TimeDecayPlugin(BasePlugin):

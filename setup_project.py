@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-setup_project.py - Project structure generator for pyscore
+setup_project.py - Project structure generator for pyscored
 
-This script generates the entire project structure for the pyscore library,
+This script generates the entire project structure for the pyscored library,
 including directories, placeholder files, and initial content.
 """
 
@@ -23,14 +23,14 @@ console = Console()
 PROJECT_STRUCTURE = {
     "pyproject.toml": """
 [tool.poetry]
-name = "pyscore"
+name = "pyscored"
 version = "0.1.0"
 description = "Universal, Plug-in-Play Scoring System"
 authors = ["Your Name <your.email@example.com>"]
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/yourusername/pyscore"
-documentation = "https://pyscore.readthedocs.io"
+repository = "https://github.com/yourusername/pyscored"
+documentation = "https://pyscored.readthedocs.io"
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
@@ -75,14 +75,14 @@ testpaths = ["tests"]
 python_files = "test_*.py"
 python_functions = "test_*"
 python_classes = "Test*"
-addopts = "--cov=pyscore --cov-report=xml --cov-report=term"
+addopts = "--cov=pyscored --cov-report=xml --cov-report=term"
 """,
     "README.md": """
-# pyscore – Universal, Plug-in-Play Scoring System
+# pyscored – Universal, Plug-in-Play Scoring System
 
 ## Project Overview
 
-**pyscore** is a versatile, blackboxed scoring library designed for universal compatibility 
+**pyscored** is a versatile, blackboxed scoring library designed for universal compatibility 
 across various Python-based applications, including traditional games and modern web backend frameworks. 
 Developed using Poetry for package management, this library ensures ease of integration, 
 modular extensibility, and robust performance.
@@ -98,19 +98,19 @@ modular extensibility, and robust performance.
 ## Installation
 
 ```bash
-pip install pyscore
+pip install pyscored
 ```
 
 Or with Poetry:
 
 ```bash
-poetry add pyscore
+poetry add pyscored
 ```
 
 ## Quick Start
 
 ```python
-from pyscore import ScoringEngine
+from pyscored import ScoringEngine
 
 # Initialize scoring engine
 engine = ScoringEngine()
@@ -126,7 +126,7 @@ print(scores)  # {'player1': 100, 'player2': 150}
 
 ## Documentation
 
-For full documentation, visit [pyscore.readthedocs.io](https://pyscore.readthedocs.io).
+For full documentation, visit [pyscored.readthedocs.io](https://pyscored.readthedocs.io).
 
 ## License
 
@@ -216,7 +216,7 @@ Process a score update.
 ## Basic Usage
 
 ```python
-from pyscore import ScoringEngine
+from pyscored import ScoringEngine
 
 # Initialize scoring engine
 engine = ScoringEngine()
@@ -235,8 +235,8 @@ engine.reset_scores()
 ## Using Plugins
 
 ```python
-from pyscore import ScoringEngine
-from pyscore.plugins import TimeMultiplier
+from pyscored import ScoringEngine
+from pyscored.plugins import TimeMultiplier
 
 # Create a plugin that doubles scores after 1 minute
 multiplier = TimeMultiplier(config={"threshold": 60, "multiplier": 2})
@@ -254,8 +254,8 @@ engine.update_score("player1", 100)
 ### Pygame Integration
 
 ```python
-from pyscore.adapters import PygameAdapter
-from pyscore import ScoringEngine
+from pyscored.adapters import PygameAdapter
+from pyscored import ScoringEngine
 
 # Initialize the scoring engine
 engine = ScoringEngine()
@@ -275,8 +275,8 @@ def handle_scoring(event):
 
 ```python
 from fastapi import FastAPI
-from pyscore.adapters import FastAPIAdapter
-from pyscore import ScoringEngine
+from pyscored.adapters import FastAPIAdapter
+from pyscored import ScoringEngine
 
 app = FastAPI()
 engine = ScoringEngine()
@@ -296,7 +296,7 @@ adapter.register_routes(app)
 
 ## Overview
 
-The architecture of pyscore is designed to be modular, extensible, and secure.
+The architecture of pyscored is designed to be modular, extensible, and secure.
 It consists of several key components:
 
 1. **Core Scoring Engine**: The central component that manages scores and orchestrates the scoring logic.
@@ -357,9 +357,9 @@ The scoring engine supports both synchronous and asynchronous operations,
 making it suitable for multi-threaded and event-driven applications.
 """,
     "docs/CONTRIBUTING.md": """
-# Contributing to pyscore
+# Contributing to pyscored
 
-Thank you for considering contributing to pyscore! This document outlines the process for contributing to the project.
+Thank you for considering contributing to pyscored! This document outlines the process for contributing to the project.
 
 ## Code of Conduct
 
@@ -368,7 +368,7 @@ Please be respectful and considerate of others when contributing to this project
 ## Getting Started
 
 1. Fork the repository
-2. Clone your fork: `git clone https://github.com/yourusername/pyscore.git`
+2. Clone your fork: `git clone https://github.com/yourusername/pyscored.git`
 3. Install poetry: `pip install poetry`
 4. Install dependencies: `poetry install`
 5. Install pre-commit hooks: `poetry run pre-commit install`
@@ -417,9 +417,9 @@ These tools are configured in pyproject.toml and run automatically with pre-comm
 
 Releases are managed by the maintainers and follow semantic versioning.
 """,
-    "pyscore/__init__.py": """
+    "pyscored/__init__.py": """
 \"\"\"
-pyscore - Universal, Plug-in-Play Scoring System
+pyscored - Universal, Plug-in-Play Scoring System
 
 A versatile, blackboxed scoring library designed for universal compatibility
 across various Python-based applications.
@@ -427,23 +427,23 @@ across various Python-based applications.
 
 __version__ = "0.1.0"
 
-from pyscore.core.scoring_engine import ScoringEngine
+from pyscored.core.scoring_engine import ScoringEngine
 
 __all__ = ["ScoringEngine"]
 """,
-    "pyscore/core/__init__.py": """
+    "pyscored/core/__init__.py": """
 \"\"\"
-Core components of the pyscore system.
+Core components of the pyscored system.
 
 This package contains the central functionality of the scoring system.
 \"\"\"
 
-from pyscore.core.scoring_engine import ScoringEngine
-from pyscore.core.sandbox import Sandbox
+from pyscored.core.scoring_engine import ScoringEngine
+from pyscored.core.sandbox import Sandbox
 
 __all__ = ["ScoringEngine", "Sandbox"]
 """,
-    "pyscore/core/scoring_engine.py": """
+    "pyscored/core/scoring_engine.py": """
 \"\"\"
 Scoring Engine Implementation
 
@@ -535,7 +535,7 @@ class ScoringEngine:
         if player_id in self._scores:
             self._scores[player_id] = 0
 """,
-    "pyscore/core/sandbox.py": """
+    "pyscored/core/sandbox.py": """
 \"\"\"
 Sandbox Environment
 
@@ -588,20 +588,20 @@ class Sandbox:
 
         return secure_wrapper(*args, **kwargs)
 """,
-    "pyscore/plugins/__init__.py": """
+    "pyscored/plugins/__init__.py": """
 \"\"\"
-Plugin system for the pyscore library.
+Plugin system for the pyscored library.
 
 This package provides extensibility through plugins that modify scoring behavior.
 \"\"\"
 
-from pyscore.plugins.base_plugin import BasePlugin
+from pyscored.plugins.base_plugin import BasePlugin
 
 __all__ = ["BasePlugin"]
 """,
-    "pyscore/plugins/base_plugin.py": """
+    "pyscored/plugins/base_plugin.py": """
 \"\"\"
-Base Plugin for pyscore
+Base Plugin for pyscored
 
 Defines the interface that all scoring plugins must implement.
 \"\"\"
@@ -637,29 +637,29 @@ class BasePlugin(ABC):
         \"\"\"
         pass
 """,
-    "pyscore/adapters/__init__.py": """
+    "pyscored/adapters/__init__.py": """
 \"\"\"
-Adapters for integrating pyscore with various frameworks.
+Adapters for integrating pyscored with various frameworks.
 
 This package provides pre-built middleware for seamless integration with
 game and web frameworks.
 \"\"\"
 
-from pyscore.adapters.game_frameworks import GameAdapter
-from pyscore.adapters.web_frameworks import WebAdapter
+from pyscored.adapters.game_frameworks import GameAdapter
+from pyscored.adapters.web_frameworks import WebAdapter
 
 __all__ = ["GameAdapter", "WebAdapter"]
 """,
-    "pyscore/adapters/game_frameworks.py": """
+    "pyscored/adapters/game_frameworks.py": """
 \"\"\"
 Game Framework Adapters
 
-Adapters for integrating pyscore with various game frameworks.
+Adapters for integrating pyscored with various game frameworks.
 \"\"\"
 
 from typing import Any, Dict, Optional
 
-from pyscore.core.scoring_engine import ScoringEngine
+from pyscored.core.scoring_engine import ScoringEngine
 
 
 class GameAdapter:
@@ -732,16 +732,16 @@ class PygletAdapter(GameAdapter):
         super().__init__(engine, config)
         # Additional Pyglet-specific initialization
 """,
-    "pyscore/adapters/web_frameworks.py": """
+    "pyscored/adapters/web_frameworks.py": """
 \"\"\"
 Web Framework Adapters
 
-Adapters for integrating pyscore with various web frameworks.
+Adapters for integrating pyscored with various web frameworks.
 \"\"\"
 
 from typing import Any, Dict, Optional
 
-from pyscore.core.scoring_engine import ScoringEngine
+from pyscored.core.scoring_engine import ScoringEngine
 
 
 class WebAdapter:
@@ -828,22 +828,22 @@ class FastAPIAdapter(WebAdapter):
         def update_score(player_id: str, points: int):
             return {"player_id": player_id, "score": self.update_score(player_id, points)}
 """,
-    "pyscore/utils/__init__.py": """
+    "pyscored/utils/__init__.py": """
 \"\"\"
-Utility functions for the pyscore library.
+Utility functions for the pyscored library.
 
 This package provides helper functions and utilities for use throughout the library.
 \"\"\"
 
-from pyscore.utils.helpers import safe_cast
+from pyscored.utils.helpers import safe_cast
 
 __all__ = ["safe_cast"]
 """,
-    "pyscore/utils/helpers.py": """
+    "pyscored/utils/helpers.py": """
 \"\"\"
 Helper Functions
 
-Utility functions for use throughout the pyscore library.
+Utility functions for use throughout the pyscored library.
 \"\"\"
 
 from typing import Any, Callable, Optional, Type, TypeVar
@@ -903,7 +903,7 @@ Unit tests for the ScoringEngine class.
 
 import pytest
 
-from pyscore.core.scoring_engine import ScoringEngine
+from pyscored.core.scoring_engine import ScoringEngine
 
 
 def test_init():
@@ -992,7 +992,7 @@ Unit tests for the Sandbox class.
 
 import pytest
 
-from pyscore.core.sandbox import Sandbox
+from pyscored.core.sandbox import Sandbox
 
 
 def test_init():
@@ -1029,8 +1029,8 @@ Integration tests for the ScoringEngine with plugins.
 
 import pytest
 
-from pyscore.core.scoring_engine import ScoringEngine
-from pyscore.plugins.base_plugin import BasePlugin
+from pyscored.core.scoring_engine import ScoringEngine
+from pyscored.plugins.base_plugin import BasePlugin
 
 
 class TestMultiplierPlugin(BasePlugin):
@@ -1108,7 +1108,7 @@ def main() -> None:
     console.clear()
     
     # Print project banner
-    title = Text("pyscore Project Setup", style="bold cyan")
+    title = Text("pyscored Project Setup", style="bold cyan")
     subtitle = Text("Universal, Plug-in-Play Scoring System", style="italic blue")
     panel_content = Text("\n").append(title).append("\n").append(subtitle).append("\n")
     console.print(Panel(panel_content, expand=False))
